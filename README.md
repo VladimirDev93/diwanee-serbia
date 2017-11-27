@@ -1,0 +1,28 @@
+# Diwanee Serbia FE TEST
+
+# Prerequisites 
+- `NodeJS ( >= 8.x )`
+- `npm ( >= 5.x )`
+
+# Installation
+```bash
+~$ npm i 
+```
+
+This will install the following **npm** modules:
+- `Babel-CLI` ***a tool that converts the code***
+- `Babel ES6 preset` ***module that converts ES6 code to ES5 so that the older browsers can support the app***
+- `Lite-server` ***for serving the app on local server***
+
+After you have successfuly installed the application, run the following command to **preview**
+the application
+```bash
+~$ npm run start
+```
+
+This will launch your default browser, run the server and host the applciation on `http://localhost:3000`
+
+To make changes to `JavaScript` file, navigate to `/src/js/app.js`, write your code and then run
+```bash
+~$ npm run compile
+```
