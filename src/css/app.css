@@ -4,12 +4,17 @@
     
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Header configs */
 
 header {
     background: url('../img/header_bg.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* Footer */
