@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "Diwanee FE test",
   "main": "index.html",
+  "repository": {
+    "git": ""
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel-cli src/app.js -d dist/js"
   },
   "author": "Vladimir Jovanović",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
 }
