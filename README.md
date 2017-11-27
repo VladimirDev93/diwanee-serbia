@@ -10,9 +10,11 @@
 ```
 
 This will install the following **npm** modules:
-- `Babel-CLI` ***a tool that converts the code***
-- `Babel ES6 preset` ***module that converts ES6 code to ES5 so that the older browsers can support the app***
+- `Babel-CLI` ***a tool that is used for Babel modules***
+- `Babel ES6 preset` ***module that transpiles ES6 code to ES5 so that the older browsers can support the app***
 - `Lite-server` ***for serving the app on local server***
+
+# Usage
 
 After you have successfuly installed the application, run the following command to **preview**
 the application
@@ -24,5 +26,5 @@ This will launch your default browser, run the server and host the applciation o
 
 To make changes to `JavaScript` file, navigate to `/src/js/app.js`, write your code and then run
 ```bash
-~$ npm run compile
+~$ npm run transpile
 ```
