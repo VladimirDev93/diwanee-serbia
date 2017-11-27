@@ -1,6 +1,15 @@
-/* Header configs. */
+/* Varibles */
+
+:root {
+    
+}
+
+/* Header configs */
 
 header {
+    background: url('../img/header_bg.png');
+    background-position: center;
+    background-size: cover;
 }
 
 /* Footer */
