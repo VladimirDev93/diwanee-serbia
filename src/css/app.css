@@ -16,14 +16,13 @@ header {
 
 .header-background {
     background: url('../img/header_bg.png');
-    background-position: 0% 0%;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
 }
 
-
-body > header > div > div.navigation {
+body>header>div>div.navigation {
     display: inline-block;
     width: 100%;
     padding: 0 15px;
@@ -31,22 +30,25 @@ body > header > div > div.navigation {
     margin-right: auto;
 }
 
+
 /* Logo in the header */
 
-body > header > div > div.navigation > nav > img {
+.diwanee-logo {
     position: relative;
     float: left;
+    width: 200px;
+    height: 50px;
 }
 
 
 /* Nav Links */
 
-body > header > div > div.navigation > nav > ul {
+body>header>div>div.navigation>nav>ul {
     position: relative;
     float: right;
 }
 
-body > header > div > div.navigation > nav > ul > li {
+body>header>div>div.navigation>nav>ul>li {
     display: inline;
     padding: 0 5px;
 }
@@ -54,48 +56,92 @@ body > header > div > div.navigation > nav > ul > li {
 
 /* Diwanee Serbian title in header */
 
-body > header > div > div.header-main-content {
+body>header>div>div.header-main-content {
     position: relative;
     width: 65%;
-    height: inherit;
     display: block;
     margin: 0 auto;
 }
 
+
 /* Mobile Phones and Tablets */
+
 @media screen and (max-width: 1200px) {
-    body > header > div > div.header-main-content {
+    body>header>div>div.header-main-content {
         width: 100%;
         padding: 0 5px;
     }
 }
 
-body > header > div > div.header-main-content > h1 {
+body>header>div>div.header-main-content>h1 {
     font-size: 106px;
     text-align: center;
     text-transform: uppercase;
 }
 
-body > header > div > div.header-main-content > div.bottom-line {
+body>header>div>div.header-main-content>div.bottom-line,
+#jobs>div>div,
+#about>div>div {
     display: block;
     margin: 0 auto;
     width: 10%;
-    height: 5px;
+    height: 2px;
     background: orangered;
 }
 
-body > header > div > div.header-main-content > div.header-text > p {
+body>header>div>div.header-main-content>div.header-text>p {
     font-size: 36px;
     text-align: center;
 }
 
+
 /* Sections beneath the header */
-body > div.header-section {
+
+body>div.header-section {
     width: 100%;
     height: inherit;
 }
 
+#development>div.development,
+#web_ui_design>div.web_ui_design,
+#work_in_team>div.work_in_team {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+
+#development>div>img,
+#web_ui_design>div>img,
+#work_in_team>div>img {
+    display: table;
+    margin: 0 auto;
+}
+
+#development>div>p.section-title,
+#web_ui_design>div>p.section-title,
+#work_in_team>div>p.section-title {
+    text-align: center;
+}
+
+#development>div>p.section-text,
+#web_ui_design>div>p.section-text,
+#work_in_team>div>p.section-text {
+    text-align: center;
+}
+
+#development>div>div,
+#web_ui_design>div>div,
+#work_in_team>div>div {
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+    height: 2px;
+    background: orangered;
+}
+
+
 /* Development */
+
 #development {
     display: inline-block;
     background: #fbfbfb;
@@ -103,7 +149,9 @@ body > div.header-section {
     height: inherit;
 }
 
+
 /* Web & UI development */
+
 #web_ui_design {
     display: inline-block;
     background: #ededed;
@@ -111,7 +159,9 @@ body > div.header-section {
     height: inherit;
 }
 
+
 /* Work in team */
+
 #work_in_team {
     display: inline-block;
     background: #fbfbfb;
@@ -119,71 +169,260 @@ body > div.header-section {
     height: inherit;
 }
 
+
 /* Jobs section */
+
 #jobs {
     width: 100%;
     height: inherit;
 }
-#jobs > div.jobs-main {
+
+#jobs>div.jobs-main {
     display: block;
     margin: 0 auto;
     width: 65%;
 }
-#jobs > section > div {
+
+#jobs>section>div {
     margin: 0 auto;
     width: 65%;
     padding: 10px 0;
 }
 
+
 /* Main jobs section */
 
-#jobs > div > p:nth-child(1) {
+#jobs>div>p:nth-child(1) {
     text-align: center;
-}
-#jobs > div > h1 {
-    text-align: center;
-}
-#jobs > div > p:nth-child(4) {
-    text-align:center;
 }
 
+#jobs>div>h1 {
+    text-align: center;
+}
+
+#jobs>div>p:nth-child(4) {
+    text-align: center;
+}
+
+
 /* Jobs */
-section > div > div.apply {
+
+section>div>div.apply {
     display: inline-block;
     width: 100%;
 }
-#jobs > section > div > div > p {
+
+#jobs>section>div>div>p {
     position: relative;
     width: 50%;
 }
 
-section > div > div > a {
+section>div>div>a {
     position: relative;
     float: right;
 }
 
+
 /* Skills for jobs */
-#jobs > section > div > a {
+
+#jobs>section>div>a {
     padding: 5px;
     border: 1px solid grey;
     border-radius: 3px;
     color: black;
     text-decoration: none;
+    -moz-text-decoration: none;
 }
 
+
+/* Apply button */
+
+#jobs>section>div>div>a {
+    display: table-cell;
+    padding: 10px 15px;
+    border: 1px solid black;
+    text-decoration: none;
+    -moz-text-decoration: none;
+    width: 20%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
 /* Project Manager job */
-#jobs > section:nth-child(3) {
+
+#jobs>section:nth-child(3) {
     background: #222;
     color: white;
 }
-#jobs > section:nth-child(3) > div > a {
+
+#jobs>section:nth-child(3)>div>a {
     color: rgb(252, 41, 80);
 }
 
 
+/* Load more job posts */
 
+#jobs>a {
+    background: #e2e2e2;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    -moz-text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    width: 15%;
+    color: black;
+}
+
+
+/* About */
+
+#about>div {
+    margin: 0 auto;
+    width: 65%;
+}
+
+#about>div>p:nth-child(1) {
+    text-align: center;
+}
+
+#about>div>h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Social "Follow us" */
+
+body>div.social-media>p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+body>div.social-media>div {
+    margin: 0 auto;
+    width: 8%;
+}
+
+body>div.social-media>div>div.twitter {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: rgb(0, 174, 255);
+}
+
+body>div.social-media>div>div.facebook {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: blue;
+}
+
+body>div.social-media>div>div>i {
+    color: white;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}
 
 
 /* Footer */
 
-footer {}
+footer {
+    background: #1e1e1e;
+    color: white;
+}
+
+body>footer>div.locations {
+    background: #222;
+    padding: 5% 0;
+}
+
+body>footer>div.locations>div>div {
+    display: inline-block;
+}
+
+body>footer>div.locations>div {
+    margin: 0 auto;
+    width: 70%;
+}
+
+body>footer>div.copyright {
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+/* Locations */
+
+body>footer>div.locations>div>div {
+    width: 33%;
+}
+
+body>footer>div.locations>div>div>ul {
+    padding: 0 !important;
+}
+
+body>footer>div.locations>div>div>ul>li {
+    list-style: none;
+}
+
+
+/* Pins */
+
+body>footer>div.locations>div>div>h2:before {
+    content: "\f041";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Beirut */
+
+body>footer>div.locations>div>div.beirut>h2,
+body>footer>div.locations>div>div.beirut>ul {
+    text-align: center;
+}
+
+
+/* Belgrade */
+
+body>footer>div.locations>div>div.belgrade>h2,
+body>footer>div.locations>div>div.belgrade>ul {
+    text-align: right;
+}
+
+
+/* Copyright */
+
+body>footer>div.bottom-footer {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+body>footer>div.bottom-footer>div {
+    display: inline-block;
+    width: 80%;
+}
+
+body>footer>div.bottom-footer>div>p {
+    display: inline-block;
+    width: 100%;
+}
+
+body>footer>div.bottom-footer>div>p>i {
+    float: right;
+}
+
+body>footer>div.bottom-footer>p {
+    display: inline;
+    margin: 0 !important;
+}
