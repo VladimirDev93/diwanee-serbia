@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="./src/css/canonical.css">
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="./src/css/app.css">
@@ -61,9 +61,15 @@
         <nav>
           <img class="diwanee-logo" src="/src/img/diwanee_logo.svg" alt="logo">
           <ul class="navlinks">
-            <li>O nama</li>
-            <li>Poslovi</li>
-            <li>Kontakt</li>
+            <a href="#about">
+              <li>O nama</li>
+            </a>
+            <a href="#jobs">
+              <li>Poslovi</li>
+            </a>
+            <a href="#contact">
+              <li>Kontakt</li>
+            </a>
           </ul>
         </nav>
       </div>
@@ -82,25 +88,28 @@
     <section id="development">
       <div class="development">
         <img src="/src/img/development.png" alt="img" class="section-logo">
-        <p class="section-title">Lorem ipsum</p>
+        <p class="section-title">Development</p>
         <div class="section-bottom-line"></div>
-        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis at ipsum quis gravida.</p>
+        <p class="section-text">Front-end Developers play a critical role in most projects at Code and Theory. They are actively involved throughout
+          the project lifecycle, often times starting with rapid prototypes early in the design phase. </p>
       </div>
     </section>
     <section id="web_ui_design">
       <div class="web_ui_design">
         <img src="/src/img/web_and_ui.png" alt="img" class="section-logo">
-        <p class="section-title">Lorem ipsum</p>
+        <p class="section-title">Web & UI Development</p>
         <div class="section-bottom-line"></div>
-        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis at ipsum quis gravida.</p>
+        <p class="section-text">Front-end Developers play a critical role in most projects at Code and Theory. They are actively involved throughout
+          the project lifecycle, often times starting with rapid prototypes early in the design phase. </p>
       </div>
     </section>
     <section id="work_in_team">
       <div class="work_in_team">
         <img src="/src/img/work_in_team.png" alt="img" class="section-logo">
-        <p class="section-title">Lorem ipsum</p>
+        <p class="section-title">Work in team</p>
         <div class="section-bottom-line"></div>
-        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis at ipsum quis gravida.</p>
+        <p class="section-text">Front-end Developers play a critical role in most projects at Code and Theory. They are actively involved throughout
+          the project lifecycle, often times starting with rapid prototypes early in the design phase. </p>
       </div>
     </section>
   </div>
@@ -120,11 +129,11 @@
         <div class="apply">
           <p class="job-description">Tražimo front-end developera sa odličnim poznavanjem i iskustvom više od godinu dana na Drupalu.
           </p>
-          <a href="#" class="job-apply">Prijavi se</a>
+          <a href="javascript:void()" class="job-apply">Prijavi se</a>
         </div>
-        <a href="#" class="job-skills">#HTML</a>
-        <a href="#" class="job-skills">#CSS</a>
-        <a href="#" class="job-skills">#JavaScript</a>
+        <a href="javascript:void()" class="job-skills">#HTML</a>
+        <a href="javascript:void()" class="job-skills">#CSS</a>
+        <a href="javascript:void()" class="job-skills">#JavaScript</a>
       </div>
     </section>
     <!-- Second job -->
@@ -134,12 +143,12 @@
         <div class="apply">
           <p class="job-description">Tražimo Project Managera sa odličnim organizacionim sposobnostima i iskustvom vođenja digital projekta...
           </p>
-          <a href="#" class="job-apply">Prijavi se</a>
+          <a href="javascript:void()" class="job-apply">Prijavi se</a>
         </div>
-        <a href="#" class="job-skills">#HTML</a>
-        <a href="#" class="job-skills">#CSS</a>
-        <a href="#" class="job-skills">#Balsamiq</a>
-        <a href="#" class="job-skills">#UXpin</a>
+        <a href="javascript:void()" class="job-skills">#HTML</a>
+        <a href="javascript:void()" class="job-skills">#CSS</a>
+        <a href="javascript:void()" class="job-skills">#Balsamiq</a>
+        <a href="javascript:void()" class="job-skills">#UXpin</a>
       </div>
     </section>
     <!-- Third job -->
@@ -149,15 +158,17 @@
         <div class="apply">
           <p class="job-description">Ako si kreativan/a i voliš da radiš u timu, poseduješ višegodišnje iskustvo iz oblasti digital dizajna, ux/ui...
           </p>
-          <a href="#" class="job-apply">Prijavi se</a>
+          <a href="javascript:void()" class="job-apply">Prijavi se</a>
         </div>
-        <a href="#" class="job-skills">#Sketch</a>
-        <a href="#" class="job-skills">#AdobeXD</a>
-        <a href="#" class="job-skills">#Photoshop</a>
-        <a href="#" class="job-skills">#Balsamiq</a>
+        <a href="javascript:void()" class="job-skills">#Sketch</a>
+        <a href="javascript:void()" class="job-skills">#AdobeXD</a>
+        <a href="javascript:void()" class="job-skills">#Photoshop</a>
+        <a href="javascript:void()" class="job-skills">#Balsamiq</a>
       </div>
     </section>
-    <a href="#" class="load-more-jobs">Učitaj još pozicija</a>
+    <div class="more-jobs">
+      <a href="javascript:void()" class="load-more-jobs">Učitaj još pozicija</a>
+    </div>
   </div>
 
   <!-- About us -->
@@ -169,8 +180,9 @@
       <p>Diwanee je digitalna medijska kompanija, okrenuta velikoj ženskoj publici na Bliskom istoku. Naša kompanija stvara
         i distribuira originalan, visokokvalitetan i pouzdan sadržaj. Diwanee je takođe partner sa YouTube-om, i zajedno
         smo pokrenuli kanal "DUNIATI", nudeći na taj način sve vrste bogatog video sadržaja za arapske žene širom sveta.
-        Radimo sa velikim brojem brendova radi povećanja angažovanja, a sve u digitalnom prostoru. Diwanee je partner i sa
-        velikim regionalnim vlasnicima medija, kako bismo upravljali svojom digitalnom prisutnošću.</p>
+        <br/>
+        <br/> Radimo sa velikim brojem brendova radi povećanja angažovanja, a sve u digitalnom prostoru. Diwanee je partner i
+        sa velikim regionalnim vlasnicima medija, kako bismo upravljali svojom digitalnom prisutnošću.</p>
     </div>
   </div>
 
@@ -179,10 +191,14 @@
     <p>Pratite nas</p>
     <div class="social-media-follow-us">
       <div class="twitter">
-        <i class="fa fa-twitter"></i>
+        <a href="//twitter.com/diwanee">
+          <i class="fa fa-twitter"></i>
+        </a>
       </div>
       <div class="facebook">
-        <i class="fa fa-facebook"></i>
+        <a href="//facebook.com/Diwanee">
+          <i class="fa fa-facebook"></i>
+        </a>
       </div>
     </div>
   </div>
@@ -192,28 +208,29 @@
     <div class="locations">
       <div class="location-container">
         <div class="dubai">
-          <h2>Lorem</h2>
+          <h4>Dubai</h4>
           <ul>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
+            <li>Office Park, Building Block A</li>
+            <li>Units A301-A302</li>
+            <li>Dubai Internet City</li>
+            <li>T: 971 4 - 434 7147</li>
           </ul>
         </div>
         <div class="beirut">
-          <h2>Lorem</h2>
+          <h4>Beirut</h4>
           <ul>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
+            <li>Dora, Seaside Road,</li>
+            <li>BCP bldg (Facing Demco Steel)</li>
+            <li>Mobile: 961 76 - 866 700</li>
+            <li>Fax: 961 1 - 244 846</li>
           </ul>
         </div>
         <div class="belgrade">
-          <h2>Lorem</h2>
+          <h4>Belgrade</h4>
           <ul>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
+            <li>Resavska 33,</li>
+            <li>11000 Beograd </li>
+            <li>Tel: +381 11 - 3340 117</li>
             <li>Lorem ipsum</li>
           </ul>
         </div>
@@ -222,18 +239,23 @@
     <div class="bottom-footer">
       <div class="copyright">
         <p class="copyright-text">Copyright 2015 Diwanee Serbia all rights reserved
-          <i class="fa fa-twitter"></i>
-          <i class="fa fa-linkedin"></i>
+          <a href="//linkedin.com/company/diwanee">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="//twitter.com/diwanee">
+            <i class="fa fa-twitter"></i>
+          </a>
       </div>
       <p class="site-address">www.diwanee.com</p>
     </div>
   </footer>
-
-  <!-- Main JavaScript -->
-  <script src="./dist/js/app.js"></script>
+  <a href="#0" class="cd-top"></a>
 
   <!-- jQuery 3.2.1 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="./dist/js/app.js"></script>
 
   <!-- Console message output -->
   <script>

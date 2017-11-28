@@ -1,6 +1,9 @@
 /* Varibles */
 
-:root {}
+:root {
+    --job-skill: #c41230;
+    --line-color: #c41230;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -25,7 +28,7 @@ header {
 body>header>div>div.navigation {
     display: inline-block;
     width: 100%;
-    padding: 0 15px;
+    padding: 1% 10%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -48,9 +51,15 @@ body>header>div>div.navigation>nav>ul {
     float: right;
 }
 
-body>header>div>div.navigation>nav>ul>li {
+body>header>div>div.navigation>nav>ul>a {
+    text-decoration: none;
+    color: #000;
+}
+
+body>header>div>div.navigation>nav>ul>a>li {
     display: inline;
-    padding: 0 5px;
+    padding: 0 15px;
+    text-transform: uppercase;
 }
 
 
@@ -86,7 +95,7 @@ body>header>div>div.header-main-content>div.bottom-line,
     margin: 0 auto;
     width: 10%;
     height: 2px;
-    background: orangered;
+    background: var(--line-color);
 }
 
 body>header>div>div.header-main-content>div.header-text>p {
@@ -115,18 +124,25 @@ body>div.header-section {
 #work_in_team>div>img {
     display: table;
     margin: 0 auto;
+    padding: 5% 0;
 }
 
 #development>div>p.section-title,
 #web_ui_design>div>p.section-title,
 #work_in_team>div>p.section-title {
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
 }
 
 #development>div>p.section-text,
 #web_ui_design>div>p.section-text,
 #work_in_team>div>p.section-text {
     text-align: center;
+    color: #666666;
+    letter-spacing: 1px;
+    line-height: 24px;
 }
 
 #development>div>div,
@@ -136,7 +152,7 @@ body>div.header-section {
     margin: 0 auto;
     width: 10%;
     height: 2px;
-    background: orangered;
+    background: #c4c4c4;
 }
 
 
@@ -147,6 +163,7 @@ body>div.header-section {
     background: #fbfbfb;
     width: 33.333333%;
     height: inherit;
+    padding: 2% 0;
 }
 
 
@@ -157,6 +174,9 @@ body>div.header-section {
     background: #ededed;
     width: 33.333333%;
     height: inherit;
+    margin-left: -4px;
+    margin-top: -2px;
+    padding: 2% 0;
 }
 
 
@@ -167,6 +187,9 @@ body>div.header-section {
     background: #fbfbfb;
     width: 33.333333%;
     height: inherit;
+    margin-left: -4px;
+    margin-top: -2px;
+    padding: 2% 0;
 }
 
 
@@ -181,27 +204,32 @@ body>div.header-section {
     display: block;
     margin: 0 auto;
     width: 65%;
+    padding: 5% 0;
 }
 
 #jobs>section>div {
     margin: 0 auto;
     width: 65%;
-    padding: 10px 0;
+    padding: 4% 0;
 }
-
 
 /* Main jobs section */
 
 #jobs>div>p:nth-child(1) {
     text-align: center;
+    text-transform: uppercase;
 }
 
 #jobs>div>h1 {
     text-align: center;
+    text-transform: uppercase;
+    font-size: 50pt;
 }
 
 #jobs>div>p:nth-child(4) {
     text-align: center;
+    font-size: 24pt;
+    font-weight: 300;
 }
 
 
@@ -220,16 +248,17 @@ section>div>div.apply {
 section>div>div>a {
     position: relative;
     float: right;
+    text-transform: uppercase;
 }
 
 
 /* Skills for jobs */
 
 #jobs>section>div>a {
-    padding: 5px;
+    padding: 5px 15px;
     border: 1px solid grey;
     border-radius: 3px;
-    color: black;
+    color: var(--job-skill);
     text-decoration: none;
     -moz-text-decoration: none;
 }
@@ -240,31 +269,72 @@ section>div>div>a {
 #jobs>section>div>div>a {
     display: table-cell;
     padding: 10px 15px;
-    border: 1px solid black;
+    border: 1px solid #000;
+    color: #000;
     text-decoration: none;
     -moz-text-decoration: none;
     width: 20%;
     text-align: center;
     vertical-align: middle;
+    border-radius: 3px;
 }
 
+/* Job roles */
+#jobs > section > div > h2 {
+    text-transform: uppercase;
+    margin-top: 0;
+}
 
 /* Project Manager job */
 
 #jobs>section:nth-child(3) {
     background: #222;
-    color: white;
+    color: #fff;
 }
 
-#jobs>section:nth-child(3)>div>a {
-    color: rgb(252, 41, 80);
+#jobs > section:nth-child(3) > div > h2:hover,
+#jobs > section:nth-child(3) > div > div > p:hover  {
+    color: #f2f2f2;
 }
 
+#jobs > section:nth-child(3) > div > a {
+    color: #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+#jobs > section:nth-child(3) > div > a:hover {
+    color: #000;
+    background: #fff;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+#jobs > section:nth-child(3) > div > div > a {
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+#jobs > section:nth-child(3) > div > div > a:hover {
+    background: #f2f2f2;
+    color: #000;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
 
 /* Load more job posts */
-
-#jobs>a {
-    background: #e2e2e2;
+#jobs > div.more-jobs {
+    padding: 5% 0;
+}
+#jobs > div.more-jobs > a {
+    background: #eee;
     padding: 15px;
     text-align: center;
     text-transform: uppercase;
@@ -278,27 +348,41 @@ section>div>div>a {
 
 
 /* About */
-
+#about {
+    background: #fbfbfb;
+}
 #about>div {
     margin: 0 auto;
     width: 65%;
+    padding: 5% 0;
 }
-
 #about>div>p:nth-child(1) {
     text-align: center;
+    text-transform: uppercase;
+    color: #a8a8a8;
 }
 
 #about>div>h1 {
     text-align: center;
     text-transform: uppercase;
+    font-size: 50pt;
+}
+#about > div > p:nth-child(4) {
+    line-height: 26px;
+    font-size: 16pt;
+    text-align: left;
 }
 
 
 /* Social "Follow us" */
+body > div.social-media {
+    padding: 5% 0;
+}
 
 body>div.social-media>p {
     text-align: center;
     text-transform: uppercase;
+    color: #a8a8a8;
 }
 
 body>div.social-media>div {
@@ -310,17 +394,19 @@ body>div.social-media>div>div.twitter {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background: rgb(0, 174, 255);
+    background: #1da1f2;
 }
 
 body>div.social-media>div>div.facebook {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background: blue;
+    background: #4267b2;
 }
-
-body>div.social-media>div>div>i {
+body > div.social-media > div > div > a {
+    text-decoration: none;
+}
+body > div.social-media > div > div > a > i {
     color: white;
     font-size: 34px;
     display: flex;
@@ -333,7 +419,6 @@ body>div.social-media>div>div>i {
 
 footer {
     background: #1e1e1e;
-    color: white;
 }
 
 body>footer>div.locations {
@@ -358,10 +443,6 @@ body>footer>div.copyright {
 
 /* Locations */
 
-body>footer>div.locations>div>div {
-    width: 33%;
-}
-
 body>footer>div.locations>div>div>ul {
     padding: 0 !important;
 }
@@ -373,30 +454,41 @@ body>footer>div.locations>div>div>ul>li {
 
 /* Pins */
 
-body>footer>div.locations>div>div>h2:before {
+body>footer>div.locations>div>div>h4:before {
     content: "\f041";
+    color: #c41230;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
+    font-size: 36px;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin-right: 4%;
+}
+body > footer > div.locations > div > div > h4 {
+    text-transform: uppercase;
+    color: #fff;
 }
 
-
+body > footer > div.locations > div > div > ul > li {
+    color: #666666;
+}
+/* Dubai */
+body > footer > div.locations > div > div.dubai {
+    width: 41.666667%;
+}
 /* Beirut */
-
-body>footer>div.locations>div>div.beirut>h2,
-body>footer>div.locations>div>div.beirut>ul {
-    text-align: center;
+body > footer > div.locations > div > div.beirut {
+    width: 35%;
 }
-
 
 /* Belgrade */
 
-body>footer>div.locations>div>div.belgrade>h2,
-body>footer>div.locations>div>div.belgrade>ul {
-    text-align: right;
+body > footer > div.locations > div > div.belgrade {
+    width: 20%;
+}
+body > footer > div.locations > div > div.belgrade > ul > li:nth-child(4) {
+    visibility: hidden;
 }
 
 
@@ -406,23 +498,85 @@ body>footer>div.bottom-footer {
     display: block;
     width: 70%;
     margin: 0 auto;
+    padding: 10px 0;
 }
 
 body>footer>div.bottom-footer>div {
     display: inline-block;
     width: 80%;
+    height: inherit;
 }
 
 body>footer>div.bottom-footer>div>p {
     display: inline-block;
     width: 100%;
+    color: #666666;
 }
 
-body>footer>div.bottom-footer>div>p>i {
+body>footer>div.bottom-footer>div>p>a>i {
     float: right;
+    color: #666666;
+    font-size: 28px;
+    padding: 0 10px;
+    margin-top: -5px;
 }
 
 body>footer>div.bottom-footer>p {
     display: inline;
     margin: 0 !important;
+    color: #666666;
 }
+
+/* Back to top */
+.cd-top {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    /* image replacement properties */
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    background: rgba(196, 18, 48, 0.8) url(../img/cd-top-arrow.svg) no-repeat center 50%;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 100px;
+    -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+    -moz-transition: opacity .3s 0s, visibility 0s .3s;
+    transition: opacity .3s 0s, visibility 0s .3s;
+  }
+  .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+    -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+    -moz-transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity .3s 0s, visibility 0s 0s;
+  }
+  .cd-top.cd-is-visible {
+    /* the button becomes visible */
+    visibility: visible;
+    opacity: 1;
+  }
+  .cd-top.cd-fade-out {
+    /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+    opacity: .5;
+  }
+  .no-touch .cd-top:hover {
+    background-color: #e86256;
+    opacity: 1;
+  }
+  @media only screen and (min-width: 768px) {
+    .cd-top {
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    .cd-top {
+      height: 60px;
+      width: 60px;
+      right: 30px;
+      bottom: 30px;
+    }
+  }
