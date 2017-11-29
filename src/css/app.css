@@ -374,8 +374,10 @@ section>div>div.apply {
 }
 
 #jobs>section>div>div>p {
+    display: inline-block;
     position: relative;
     width: 50%;
+    padding-bottom: 3%; 
 }
 
 section>div>div>a {
@@ -435,6 +437,7 @@ section>div>div>a {
     text-align: center;
     vertical-align: middle;
     border-radius: 3px;
+    margin-top: 1%;
 }
 
 
@@ -743,22 +746,45 @@ body>footer>div.bottom-footer>div {
 
 body>footer>div.bottom-footer>div>p {
     display: inline-block;
-    width: 100%;
+    width: 87%;
     color: #666666;
 }
 
-body>footer>div.bottom-footer>div>p>a>i {
+body > footer > div.bottom-footer > div > div > a > i {
     float: right;
     color: #666666;
     font-size: 28px;
     padding: 0 10px;
-    margin-top: -5px;
+    margin-bottom: -5%;
 }
 
 body>footer>div.bottom-footer>p {
     display: inline;
     margin: 0 !important;
     color: #666666;
+}
+
+body > footer > div.bottom-footer > div > div {
+    display: inline-block;
+    width: 12%;
+}
+
+@media screen and (max-width: 1200px) {
+    body>footer>div.bottom-footer>div {
+        display: block;
+        width: 100%;
+    }
+    body>footer>div.bottom-footer>div>p {
+        width: 70%;
+    }
+    body > footer > div.bottom-footer > div > div {
+        width: 27%;
+    }
+    body>footer>div.bottom-footer>p {
+        margin-top: 0;
+        display: block;
+        text-align: center;
+    }        
 }
 
 
@@ -769,7 +795,7 @@ body>footer>div.bottom-footer>p {
     height: 40px;
     width: 40px;
     position: fixed;
-    bottom: 40px;
+    bottom: 5px;
     right: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     /* image replacement properties */
