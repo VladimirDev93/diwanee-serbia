@@ -1,5 +1,12 @@
 'use strict';
 
+// Hamburger
+$('.hamburger-menu').on('click', function () {
+	$('.navlinks').toggleClass('open');
+});
+
+// Back to top
+
 $(document).ready(function ($) {
 	// browser window scroll (in pixels) after which the "back to top" link is shown
 	var offset = 300,

@@ -3,6 +3,7 @@
 :root {
     --job-skill: #c41230;
     --line-color: #c41230;
+    --small-heading: #8e8e8e;
 }
 
 body {
@@ -46,20 +47,104 @@ body>header>div>div.navigation {
 
 /* Nav Links */
 
-body>header>div>div.navigation>nav>ul {
+body > header > div > div.navigation > nav > ul {
     position: relative;
     float: right;
 }
 
-body>header>div>div.navigation>nav>ul>a {
+body > header > div > div.navigation > nav > ul > div > a {
     text-decoration: none;
     color: #000;
 }
 
-body>header>div>div.navigation>nav>ul>a>li {
+body > header > div > div.navigation > nav > ul > div > a > li {
     display: inline;
     padding: 0 15px;
     text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+    body > header > div > div.navigation > nav > ul > div.hamburger-toggle {
+        display: none;
+    }
+}
+/* Hamburger menu */
+@media screen and (max-width: 800px) {
+    .hamburger-menu {
+        float: right;
+        height: 50px;
+        width: 50px;
+        margin-right: 2%;
+        background: url('../img/hamburger-menu.png') no-repeat;
+    }
+    .navlinks {
+        z-index: 99999999;
+        overflow: hidden;
+        background: rgba(38, 36, 34, 0.97);
+        width: 100%;
+        height: 0;
+    }
+    .navlinks.open {
+        position: absolute;
+        padding: 0 !important;
+        height: 90vh;
+        margin-top: 15%;
+        animation: roll 300ms;
+        -moz-animation: roll 300ms;
+        -o-animation: roll 300ms;
+    }
+    @keyframes roll {
+         0% {
+           height: 0vh;
+         }
+         50% {
+           height: 45vh;
+         }
+         100% {
+           height: 90vh;
+         }
+    }
+    .navlinks a li {
+        display: block !important;
+        float: none;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        margin: 0;
+        font-size: 32px;
+    }
+    .navlinks a {
+        color: var(--small-heading) !important;
+        padding: 10% 0;
+        display: block;
+        margin: 0;
+        text-decoration: none;
+    }
+    .hamburger-toggle {
+        overflow: hidden;
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+    body > header > div > div.navigation > nav > ul > div:nth-child(1) {
+        display: block;
+        padding: 25% 0;
+    }
+    body > header > div > div.navigation > nav > ul > div > p {
+        display: inline-block;
+        width: 68.5%;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: var(--small-heading);
+    }
+    body > header > div > div.navigation > nav > ul > div > div {
+        display: inline-block;
+        width: 30%;
+    }
+    body > header > div > div.navigation > nav > ul > div > div > a {
+        display: inline-block;
+        font-size: 36px;
+        padding: 0 10%;
+    }
 }
 
 
@@ -79,6 +164,16 @@ body>header>div>div.header-main-content {
     body>header>div>div.header-main-content {
         width: 100%;
         padding: 0 5px;
+    }
+    body>header>div>div.header-main-content>h1 {
+        font-size: 55px !important;
+    }
+    body>header>div>div.navigation {
+        display: inline-block;
+        width: 100%;
+        padding: 3% 0 !important;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -193,6 +288,28 @@ body>div.header-section {
 }
 
 
+/* Mobile & tablet */
+
+@media screen and (max-width: 1200px) {
+    #development,
+    #web_ui_design,
+    #work_in_team,
+    #development>div.development,
+    #web_ui_design>div.web_ui_design,
+    #work_in_team>div.work_in_team {
+        width: 100%;
+        padding: 5% 0 !important;
+    }
+    #development>div>p.section-text, #web_ui_design>div>p.section-text, #work_in_team>div>p.section-text {
+        width: 90%;
+        margin: 0 auto;
+    }
+    div.header-section > section > div > div.section-bottom-line {
+        margin-bottom: 4% !important;
+    }
+}
+
+
 /* Jobs section */
 
 #jobs {
@@ -213,11 +330,13 @@ body>div.header-section {
     padding: 4% 0;
 }
 
+
 /* Main jobs section */
 
 #jobs>div>p:nth-child(1) {
     text-align: center;
     text-transform: uppercase;
+    color: var(--small-heading);
 }
 
 #jobs>div>h1 {
@@ -230,6 +349,20 @@ body>div.header-section {
     text-align: center;
     font-size: 24pt;
     font-weight: 300;
+}
+
+
+/* Mobile & tablet */
+
+@media screen and (max-width: 1200px) {
+    #jobs>div.jobs-main {
+        width: 100%;
+    }
+    #jobs>div.jobs-main>p:nth-child(4) {
+        margin: 0 auto;
+        width: 90%;
+        padding: 5% 0;
+    }
 }
 
 
@@ -249,6 +382,31 @@ section>div>div>a {
     position: relative;
     float: right;
     text-transform: uppercase;
+}
+
+
+/* Mobile & tablet */
+
+@media screen and (max-width: 1200px) {
+    #jobs>section>div {
+        margin: 0 auto;
+        width: 90%;
+        padding: 5% 0;
+    }
+    #jobs>section>div>div>p {
+        width: 100%;
+    }
+    #jobs>section>div>div>a {
+        display: none !important;
+    }
+    #jobs>section>div>a {
+        border: none !important;
+        padding-left: 0 !important;
+        padding-right: 5px !important;
+    }
+    #jobs>section {
+        padding: 15% 0;
+    }
 }
 
 
@@ -279,11 +437,14 @@ section>div>div>a {
     border-radius: 3px;
 }
 
+
 /* Job roles */
-#jobs > section > div > h2 {
+
+#jobs>section>div>h2 {
     text-transform: uppercase;
     margin-top: 0;
 }
+
 
 /* Project Manager job */
 
@@ -292,19 +453,19 @@ section>div>div>a {
     color: #fff;
 }
 
-#jobs > section:nth-child(3) > div > h2:hover,
-#jobs > section:nth-child(3) > div > div > p:hover  {
+#jobs>section:nth-child(3)>div>h2:hover,
+#jobs>section:nth-child(3)>div>div>p:hover {
     color: #f2f2f2;
 }
 
-#jobs > section:nth-child(3) > div > a {
+#jobs>section:nth-child(3)>div>a {
     color: #fff;
     -webkit-transition: all 300ms ease-in-out;
     -moz-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
 }
 
-#jobs > section:nth-child(3) > div > a:hover {
+#jobs>section:nth-child(3)>div>a:hover {
     color: #000;
     background: #fff;
     -webkit-transition: all 300ms ease-in-out;
@@ -312,7 +473,7 @@ section>div>div>a {
     transition: all 300ms ease-in-out;
 }
 
-#jobs > section:nth-child(3) > div > div > a {
+#jobs>section:nth-child(3)>div>div>a {
     border: 1px solid #fff;
     color: #fff;
     text-transform: uppercase;
@@ -321,7 +482,7 @@ section>div>div>a {
     transition: all 300ms ease-in-out;
 }
 
-#jobs > section:nth-child(3) > div > div > a:hover {
+#jobs>section:nth-child(3)>div>div>a:hover {
     background: #f2f2f2;
     color: #000;
     -webkit-transition: all 300ms ease-in-out;
@@ -329,11 +490,14 @@ section>div>div>a {
     transition: all 300ms ease-in-out;
 }
 
+
 /* Load more job posts */
-#jobs > div.more-jobs {
+
+#jobs>div.more-jobs {
     padding: 5% 0;
 }
-#jobs > div.more-jobs > a {
+
+#jobs>div.more-jobs>a {
     background: #eee;
     padding: 15px;
     text-align: center;
@@ -347,19 +511,31 @@ section>div>div>a {
 }
 
 
+/* Mobile & tablet */
+
+@media screen and (max-width: 1200px) {
+    #jobs>div.more-jobs>a {
+        width: 50%;
+    }
+}
+
+
 /* About */
+
 #about {
     background: #fbfbfb;
 }
+
 #about>div {
     margin: 0 auto;
     width: 65%;
     padding: 5% 0;
 }
+
 #about>div>p:nth-child(1) {
     text-align: center;
     text-transform: uppercase;
-    color: #a8a8a8;
+    color: var(--small-heading);
 }
 
 #about>div>h1 {
@@ -367,22 +543,38 @@ section>div>div>a {
     text-transform: uppercase;
     font-size: 50pt;
 }
-#about > div > p:nth-child(4) {
+
+#about>div>p:nth-child(4) {
     line-height: 26px;
     font-size: 16pt;
     text-align: left;
 }
 
 
+/* Mobile & tablet */
+
+@media screen and (max-width: 1200px) {
+    #about>div {
+        margin: 0 auto;
+        width: 90%;
+        padding: 5% 0;
+    }
+    #about>div>p:nth-child(4) {
+        line-height: 36px;
+    }
+}
+
+
 /* Social "Follow us" */
-body > div.social-media {
+
+body>div.social-media {
     padding: 5% 0;
 }
 
 body>div.social-media>p {
     text-align: center;
     text-transform: uppercase;
-    color: #a8a8a8;
+    color: var(--small-heading);
 }
 
 body>div.social-media>div {
@@ -403,15 +595,34 @@ body>div.social-media>div>div.facebook {
     height: 50px;
     background: #4267b2;
 }
-body > div.social-media > div > div > a {
+
+body>div.social-media>div>div>a {
     text-decoration: none;
 }
-body > div.social-media > div > div > a > i {
+
+body>div.social-media>div>div>a>i {
     color: white;
     font-size: 34px;
     display: flex;
     justify-content: center;
     margin-top: 15%;
+}
+
+
+/* Mobile & tablet */
+
+@media screen and (max-width: 1200px) {
+    body>div.social-media>div>div {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    body>div.social-media>div {
+        margin: 0 auto;
+        width: 30%;
+    }
+    body>div.social-media>div>div>a>i {
+        margin-top: 25%;
+    }
 }
 
 
@@ -452,6 +663,20 @@ body>footer>div.locations>div>div>ul>li {
 }
 
 
+/* Mobile & tablet */
+
+@media screen and (max-width: 1200px) {
+    body>footer>div.locations>div,
+    body>footer>div.bottom-footer {
+        margin: 0 auto;
+        width: 90% !important;
+    }
+    body>footer>div.locations>div>div {
+        width: 100% !important;
+    }
+}
+
+
 /* Pins */
 
 body>footer>div.locations>div>div>h4:before {
@@ -465,29 +690,38 @@ body>footer>div.locations>div>div>h4:before {
     -moz-osx-font-smoothing: grayscale;
     margin-right: 4%;
 }
-body > footer > div.locations > div > div > h4 {
+
+body>footer>div.locations>div>div>h4 {
     text-transform: uppercase;
     color: #fff;
 }
 
-body > footer > div.locations > div > div > ul > li {
+body>footer>div.locations>div>div>ul>li {
     color: #666666;
 }
+
+
 /* Dubai */
-body > footer > div.locations > div > div.dubai {
+
+body>footer>div.locations>div>div.dubai {
     width: 41.666667%;
 }
+
+
 /* Beirut */
-body > footer > div.locations > div > div.beirut {
+
+body>footer>div.locations>div>div.beirut {
     width: 35%;
 }
 
+
 /* Belgrade */
 
-body > footer > div.locations > div > div.belgrade {
+body>footer>div.locations>div>div.belgrade {
     width: 20%;
 }
-body > footer > div.locations > div > div.belgrade > ul > li:nth-child(4) {
+
+body>footer>div.locations>div>div.belgrade>ul>li:nth-child(4) {
     visibility: hidden;
 }
 
@@ -527,7 +761,9 @@ body>footer>div.bottom-footer>p {
     color: #666666;
 }
 
+
 /* Back to top */
+
 .cd-top {
     display: inline-block;
     height: 40px;
@@ -547,36 +783,44 @@ body>footer>div.bottom-footer>p {
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
     -moz-transition: opacity .3s 0s, visibility 0s .3s;
     transition: opacity .3s 0s, visibility 0s .3s;
-  }
-  .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+}
+
+.cd-top.cd-is-visible,
+.cd-top.cd-fade-out,
+.no-touch .cd-top:hover {
     -webkit-transition: opacity .3s 0s, visibility 0s 0s;
     -moz-transition: opacity .3s 0s, visibility 0s 0s;
     transition: opacity .3s 0s, visibility 0s 0s;
-  }
-  .cd-top.cd-is-visible {
+}
+
+.cd-top.cd-is-visible {
     /* the button becomes visible */
     visibility: visible;
     opacity: 1;
-  }
-  .cd-top.cd-fade-out {
+}
+
+.cd-top.cd-fade-out {
     /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
     opacity: .5;
-  }
-  .no-touch .cd-top:hover {
+}
+
+.no-touch .cd-top:hover {
     background-color: #e86256;
     opacity: 1;
-  }
-  @media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 768px) {
     .cd-top {
-      right: 20px;
-      bottom: 20px;
+        right: 20px;
+        bottom: 20px;
     }
-  }
-  @media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (min-width: 1024px) {
     .cd-top {
-      height: 60px;
-      width: 60px;
-      right: 30px;
-      bottom: 30px;
+        height: 60px;
+        width: 60px;
+        right: 30px;
+        bottom: 30px;
     }
-  }
+}
