@@ -1,5 +1,7 @@
 # Diwanee Serbia FE TEST
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/VladimirDev93/diwanee-serbia.svg)](https://greenkeeper.io/)
+
 # Prerequisites 
 - `NodeJS ( >= 8.x )`
 - `npm ( >= 5.x )`
